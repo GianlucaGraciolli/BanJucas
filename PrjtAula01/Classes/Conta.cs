@@ -57,7 +57,7 @@ namespace PrjtAula01.Classes
             if (valorDeposito <= 0) 
             {
 
-                throw new Exception("Coloque um valor real de depósito!");
+                throw new Exception("Coloque um Valor diferente de Zero.");
 
             }
 
@@ -74,6 +74,16 @@ namespace PrjtAula01.Classes
 
         public double Sacar(double valorSaque)
         {
+            /*if (valorSaque <= this.Saldo)
+            {
+                this.Saldo -= valorSaque;                
+            }
+            else
+            {
+                throw new Exception("Saldo insuficiente ou Valor inválido");
+            }
+            return this.Saldo;*/
+
             if (valorSaque <= 0)
             {
                 throw new Exception ("Coloque um valor real de saque!");

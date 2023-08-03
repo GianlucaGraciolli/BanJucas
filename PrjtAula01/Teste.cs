@@ -62,6 +62,9 @@ namespace PrjtAula01
 
         private void btnSaque_Click(object sender, EventArgs e)
         {
+            //Método de Concatenação - as váriaveis e o texto não se misturam
+            //Metodo de Template String - junta texto com variáveis sem concatenar (se misturam)
+
             try
             {
                 if (txtVlrDpst.Text == String.Empty)
