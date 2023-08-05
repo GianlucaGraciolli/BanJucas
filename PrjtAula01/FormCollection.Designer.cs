@@ -58,6 +58,7 @@
             Btnadicionar.TabIndex = 3;
             Btnadicionar.Text = "Adicionar";
             Btnadicionar.UseVisualStyleBackColor = true;
+            Btnadicionar.Click += Btnadicionar_Click;
             // 
             // Btnlistar
             // 
@@ -68,6 +69,7 @@
             Btnlistar.TabIndex = 4;
             Btnlistar.Text = "Listar";
             Btnlistar.UseVisualStyleBackColor = true;
+            Btnlistar.Click += Btnlistar_Click;
             // 
             // Lstinfo
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrjtAula01.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace PrjtAula01
 {
     public partial class FormCollection : Form
     {
+        List<Cliente> Clientes = new List<Cliente>();
+
         public FormCollection()
         {
             InitializeComponent();
@@ -35,6 +38,50 @@ namespace PrjtAula01
                 mensagemFinal = mensagemFinal + $"{meuArrayString[contador]}\n";
             }
             MessageBox.Show(meuArrayString[0]);
+
+
+        }
+
+        private void Btnadicionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = new Cliente(Convert.ToInt32(txtId.Text), txtnomecliente.Text);
+
+                MessageBox.Show($"Cliente adicionado com sucesso!\n\n{cliente.Id}-{cliente.Nome}",
+                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Clientes.Add(cliente);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"{ex.HResult} que paia, bota um número dahora aí tio.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.HResult} - {ex.Message}");
+            }
+
+
+            txtnomecliente.Clear();
+            txtId.Clear();
+            txtId.Focus();
+        }
+
+        private void Btnlistar_Click(object sender, EventArgs e)
+        {
+            Lstinfo.Items.Clear();
+            foreach (var cliente in Clientes)
+            {
+                //MessageBox.Show($"{cliente.Id}: {cliente.Nome}");
+                Lstinfo.Items.Add($"{cliente.Id}-{cliente.Nome}");
+            }
+
+            //atribuindo valor a um item da lista
+            //Clientes[2].Nome = "Pepito";
+
+            //resgatando valor de um item da lista
+            //MessageBox.Show(Clientes[2].Nome);
         }
     }
 }
