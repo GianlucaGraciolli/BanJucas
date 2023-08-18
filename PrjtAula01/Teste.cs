@@ -72,7 +72,7 @@ namespace PrjtAula01
                     throw new Exception("Digite um valor para sacar.");
                 }
 
-                lblTotalSaldo.Text = $"Saldo: R$ {minhaConta.Sacar(Convert.ToDouble(txtVlrDpst.Text)).ToString("n2")}.";
+                   lblTotalSaldo.Text = $"Saldo: R$ {minhaConta.Sacar(Convert.ToDouble(txtVlrDpst.Text)).ToString("n2")}.";
                 txtVlrDpst.Clear();
                 txtVlrDpst.Focus();
             }
