@@ -19,7 +19,7 @@ namespace PrjtAula01
 
         private void lblVoltarSaque_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
     }
 }

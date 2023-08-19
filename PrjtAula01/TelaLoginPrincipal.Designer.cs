@@ -136,7 +136,7 @@
             criarCadastro.Location = new Point(903, 381);
             criarCadastro.Name = "criarCadastro";
             criarCadastro.Size = new Size(195, 46);
-            criarCadastro.TabIndex = 7;
+            criarCadastro.TabIndex = 3;
             criarCadastro.Text = "Criar minha conta BJ";
             criarCadastro.UseVisualStyleBackColor = false;
             criarCadastro.Click += criarCadastro_Click;
@@ -149,7 +149,7 @@
             esquecerSenha.Location = new Point(903, 443);
             esquecerSenha.Name = "esquecerSenha";
             esquecerSenha.Size = new Size(195, 44);
-            esquecerSenha.TabIndex = 8;
+            esquecerSenha.TabIndex = 4;
             esquecerSenha.Text = "Esqueci minha senha";
             esquecerSenha.UseVisualStyleBackColor = false;
             // 

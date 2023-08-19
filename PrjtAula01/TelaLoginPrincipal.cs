@@ -19,7 +19,7 @@ namespace PrjtAula01
             {
                 lblMsgLogin.Text = "Dados não informados!";
                 caixaLogin.Focus();
-                
+
             }
 
             else if (caixaLogin.Text == "12345678900" && senhaLogin.Text == "123456")
@@ -36,7 +36,7 @@ namespace PrjtAula01
             else if (caixaLogin.TextLength < 11 || senhaLogin.TextLength < 6)
             {
                 lblMsgLogin.Text = "Preencha os dados corretamente";
-                
+
             }
 
             Conta MinhaConta = new Conta();

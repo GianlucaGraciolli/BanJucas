@@ -36,7 +36,7 @@
             txtEmailCad = new TextBox();
             txtDataNascCad = new TextBox();
             txtRendaCad = new TextBox();
-            txtLogradCad = new TextBox();
+            txtCEPCad = new TextBox();
             txtGeneroCad = new TextBox();
             txtConfSenhaCad = new TextBox();
             txtSenhaCad = new TextBox();
@@ -47,13 +47,17 @@
             txtValDepCad = new TextBox();
             lblDepInicial = new Label();
             lblValorMin = new Label();
+            txtLogradCad = new TextBox();
+            txtCidadeCad = new TextBox();
+            txtEstadoCad = new TextBox();
+            txtNumLogCad = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtNomeCad
             // 
             txtNomeCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNomeCad.Location = new Point(133, 107);
+            txtNomeCad.Location = new Point(135, 107);
             txtNomeCad.Name = "txtNomeCad";
             txtNomeCad.PlaceholderText = "Nome Completo";
             txtNomeCad.Size = new Size(300, 29);
@@ -63,7 +67,7 @@
             // txtCpfCad
             // 
             txtCpfCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCpfCad.Location = new Point(133, 159);
+            txtCpfCad.Location = new Point(135, 143);
             txtCpfCad.Name = "txtCpfCad";
             txtCpfCad.PlaceholderText = "000.000.000-00";
             txtCpfCad.Size = new Size(300, 29);
@@ -73,7 +77,7 @@
             // txtRgCad
             // 
             txtRgCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRgCad.Location = new Point(133, 212);
+            txtRgCad.Location = new Point(135, 178);
             txtRgCad.Name = "txtRgCad";
             txtRgCad.PlaceholderText = "00.000.000-0";
             txtRgCad.Size = new Size(300, 29);
@@ -83,7 +87,7 @@
             // txtCelCad
             // 
             txtCelCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCelCad.Location = new Point(133, 265);
+            txtCelCad.Location = new Point(135, 213);
             txtCelCad.Name = "txtCelCad";
             txtCelCad.PlaceholderText = "Celular";
             txtCelCad.Size = new Size(300, 29);
@@ -93,7 +97,7 @@
             // txtEmailCad
             // 
             txtEmailCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmailCad.Location = new Point(133, 316);
+            txtEmailCad.Location = new Point(135, 248);
             txtEmailCad.Name = "txtEmailCad";
             txtEmailCad.PlaceholderText = "email@email.com";
             txtEmailCad.Size = new Size(300, 29);
@@ -103,7 +107,7 @@
             // txtDataNascCad
             // 
             txtDataNascCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDataNascCad.Location = new Point(133, 367);
+            txtDataNascCad.Location = new Point(135, 283);
             txtDataNascCad.Name = "txtDataNascCad";
             txtDataNascCad.PlaceholderText = "Data de Nascimento";
             txtDataNascCad.Size = new Size(300, 29);
@@ -113,27 +117,27 @@
             // txtRendaCad
             // 
             txtRendaCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRendaCad.Location = new Point(133, 520);
+            txtRendaCad.Location = new Point(135, 528);
             txtRendaCad.Name = "txtRendaCad";
             txtRendaCad.PlaceholderText = "Renda Mensal";
             txtRendaCad.Size = new Size(300, 29);
             txtRendaCad.TabIndex = 8;
             txtRendaCad.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtLogradCad
+            // txtCEPCad
             // 
-            txtLogradCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLogradCad.Location = new Point(133, 469);
-            txtLogradCad.Name = "txtLogradCad";
-            txtLogradCad.PlaceholderText = "Endereço Completo";
-            txtLogradCad.Size = new Size(300, 29);
-            txtLogradCad.TabIndex = 7;
-            txtLogradCad.TextAlign = HorizontalAlignment.Center;
+            txtCEPCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCEPCad.Location = new Point(135, 353);
+            txtCEPCad.Name = "txtCEPCad";
+            txtCEPCad.PlaceholderText = "CEP";
+            txtCEPCad.Size = new Size(300, 29);
+            txtCEPCad.TabIndex = 7;
+            txtCEPCad.TextAlign = HorizontalAlignment.Center;
             // 
             // txtGeneroCad
             // 
             txtGeneroCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtGeneroCad.Location = new Point(133, 418);
+            txtGeneroCad.Location = new Point(135, 318);
             txtGeneroCad.Name = "txtGeneroCad";
             txtGeneroCad.PlaceholderText = "Gênero";
             txtGeneroCad.Size = new Size(300, 29);
@@ -187,7 +191,7 @@
             lblinserirCadastro.AutoSize = true;
             lblinserirCadastro.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblinserirCadastro.ForeColor = Color.White;
-            lblinserirCadastro.Location = new Point(179, 37);
+            lblinserirCadastro.Location = new Point(174, 43);
             lblinserirCadastro.Name = "lblinserirCadastro";
             lblinserirCadastro.Size = new Size(218, 37);
             lblinserirCadastro.TabIndex = 15;
@@ -236,12 +240,57 @@
             lblValorMin.TabIndex = 18;
             lblValorMin.Text = "(mínimo R$ 1,00)";
             // 
+            // txtLogradCad
+            // 
+            txtLogradCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLogradCad.Location = new Point(135, 388);
+            txtLogradCad.Name = "txtLogradCad";
+            txtLogradCad.PlaceholderText = "Logradouro";
+            txtLogradCad.Size = new Size(300, 29);
+            txtLogradCad.TabIndex = 19;
+            txtLogradCad.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txtCidadeCad
+            // 
+            txtCidadeCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCidadeCad.Location = new Point(135, 458);
+            txtCidadeCad.Name = "txtCidadeCad";
+            txtCidadeCad.PlaceholderText = "Cidade";
+            txtCidadeCad.Size = new Size(300, 29);
+            txtCidadeCad.TabIndex = 21;
+            txtCidadeCad.TextAlign = HorizontalAlignment.Center;
+            txtCidadeCad.TextChanged += textBox2_TextChanged;
+            // 
+            // txtEstadoCad
+            // 
+            txtEstadoCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEstadoCad.Location = new Point(135, 493);
+            txtEstadoCad.Name = "txtEstadoCad";
+            txtEstadoCad.PlaceholderText = "Estado";
+            txtEstadoCad.Size = new Size(300, 29);
+            txtEstadoCad.TabIndex = 22;
+            txtEstadoCad.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txtNumLogCad
+            // 
+            txtNumLogCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumLogCad.Location = new Point(135, 423);
+            txtNumLogCad.Name = "txtNumLogCad";
+            txtNumLogCad.PlaceholderText = "Numero Logradouro";
+            txtNumLogCad.Size = new Size(300, 29);
+            txtNumLogCad.TabIndex = 23;
+            txtNumLogCad.TextAlign = HorizontalAlignment.Center;
+            // 
             // TelaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 143, 235);
             ClientSize = new Size(1218, 636);
+            Controls.Add(txtNumLogCad);
+            Controls.Add(txtEstadoCad);
+            Controls.Add(txtCidadeCad);
+            Controls.Add(txtLogradCad);
             Controls.Add(lblValorMin);
             Controls.Add(lblDepInicial);
             Controls.Add(txtValDepCad);
@@ -252,7 +301,7 @@
             Controls.Add(txtConfSenhaCad);
             Controls.Add(txtSenhaCad);
             Controls.Add(txtRendaCad);
-            Controls.Add(txtLogradCad);
+            Controls.Add(txtCEPCad);
             Controls.Add(txtGeneroCad);
             Controls.Add(txtDataNascCad);
             Controls.Add(txtEmailCad);
@@ -276,7 +325,7 @@
         private TextBox txtEmailCad;
         private TextBox txtDataNascCad;
         private TextBox txtRendaCad;
-        private TextBox txtLogradCad;
+        private TextBox txtCEPCad;
         private TextBox txtGeneroCad;
         private TextBox txtConfSenhaCad;
         private TextBox txtSenhaCad;
@@ -287,5 +336,9 @@
         private TextBox txtValDepCad;
         private Label lblDepInicial;
         private Label lblValorMin;
+        private TextBox txtLogradCad;
+        private TextBox txtCidadeCad;
+        private TextBox txtEstadoCad;
+        private TextBox txtNumLogCad;
     }
 }

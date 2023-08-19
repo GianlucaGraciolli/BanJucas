@@ -63,7 +63,7 @@
             lblVoltarSaque.Location = new Point(1002, 520);
             lblVoltarSaque.Name = "lblVoltarSaque";
             lblVoltarSaque.Size = new Size(133, 42);
-            lblVoltarSaque.TabIndex = 36;
+            lblVoltarSaque.TabIndex = 6;
             lblVoltarSaque.Text = "Voltar";
             lblVoltarSaque.UseVisualStyleBackColor = false;
             lblVoltarSaque.Click += lblVoltarSaque_Click;
@@ -76,7 +76,7 @@
             btConfirmarSaque.Location = new Point(835, 326);
             btConfirmarSaque.Name = "btConfirmarSaque";
             btConfirmarSaque.Size = new Size(300, 48);
-            btConfirmarSaque.TabIndex = 35;
+            btConfirmarSaque.TabIndex = 5;
             btConfirmarSaque.Text = "Confirmar saque";
             btConfirmarSaque.UseVisualStyleBackColor = false;
             // 
@@ -99,7 +99,7 @@
             txtValorSaque.Name = "txtValorSaque";
             txtValorSaque.PlaceholderText = "R$ 0,00";
             txtValorSaque.Size = new Size(300, 43);
-            txtValorSaque.TabIndex = 33;
+            txtValorSaque.TabIndex = 4;
             txtValorSaque.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox1
@@ -119,7 +119,7 @@
             txtCelularSaque.Name = "txtCelularSaque";
             txtCelularSaque.PlaceholderText = "(00) 00000-0000";
             txtCelularSaque.Size = new Size(300, 29);
-            txtCelularSaque.TabIndex = 31;
+            txtCelularSaque.TabIndex = 3;
             txtCelularSaque.TextAlign = HorizontalAlignment.Center;
             // 
             // txtEmailSaque
@@ -130,7 +130,7 @@
             txtEmailSaque.Name = "txtEmailSaque";
             txtEmailSaque.PlaceholderText = "Confirme seu e-mail";
             txtEmailSaque.Size = new Size(300, 29);
-            txtEmailSaque.TabIndex = 30;
+            txtEmailSaque.TabIndex = 2;
             txtEmailSaque.TextAlign = HorizontalAlignment.Center;
             // 
             // txtCpfSaque
@@ -141,7 +141,7 @@
             txtCpfSaque.Name = "txtCpfSaque";
             txtCpfSaque.PlaceholderText = "Confirme seu CPF";
             txtCpfSaque.Size = new Size(300, 29);
-            txtCpfSaque.TabIndex = 29;
+            txtCpfSaque.TabIndex = 1;
             txtCpfSaque.TextAlign = HorizontalAlignment.Center;
             // 
             // txtNomeSaque
@@ -152,7 +152,7 @@
             txtNomeSaque.Name = "txtNomeSaque";
             txtNomeSaque.PlaceholderText = "Nome Usuário";
             txtNomeSaque.Size = new Size(300, 29);
-            txtNomeSaque.TabIndex = 28;
+            txtNomeSaque.TabIndex = 0;
             txtNomeSaque.TextAlign = HorizontalAlignment.Center;
             // 
             // lblSaldoVal
