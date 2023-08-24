@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace PrjtAula01
 {
-    internal class UIClear
+    public static class UIClear
     {
-        public void CleanTxtBoxes(Form form)
+        public static void CleanTxtBoxes(Form form)
         {
             foreach (Control controle in form.Controls)
             {
-                if (controle is TextBox)
+                if (controle is TextBox || controle is ComboBox)
                 {
-                    ((TextBox)controle).Clear();
+                    controle.Text = string.Empty;
+                }
+                else if (controle is DateTimePicker)
+                {
+                    controle.Text = DateTime.Now.ToString();
                 }
             }            
         }

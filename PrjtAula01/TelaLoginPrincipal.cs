@@ -1,3 +1,6 @@
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using PrjtAula01.Classes;
 
@@ -12,10 +15,42 @@ namespace PrjtAula01
 
         private void BotaoEntrar_Click(object sender, EventArgs e)
         {
+            //Criando uma conexão
+            SqlConnection conexao =
+            new SqlConnection(ConfigurationManager.ConnectionStrings["PrjtAula01.Properties.Settings.strConexao"].ToString());
+            SqlDataReader leitor; //declarando uma variável do tipo leitor de dados
+
+            //Criando um comando
+            SqlCommand cmd = new SqlCommand();
+
+            //criando texto do comando, tipo e conexão que será usada
+            cmd.CommandText = "ps_ValidarLogin";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexao;
+
+            //passando os parâmetros necessários
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("cpf",caixaLogin.Text);
+            cmd.Parameters.AddWithValue("senhaLogin",senhaLogin.Text);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             //código quando o botão ENTRAR for clicado
 
-            if (caixaLogin.Text == String.Empty || senhaLogin.Text == String.Empty)
+            /*if (caixaLogin.Text == String.Empty || senhaLogin.Text == String.Empty)
             {
                 lblMsgLogin.Text = "Dados não informados!";
                 caixaLogin.Focus();
@@ -43,7 +78,7 @@ namespace PrjtAula01
 
             MinhaConta.Status = "ATIVA";
 
-            MessageBox.Show(MinhaConta.Status);
+            MessageBox.Show(MinhaConta.Status);*/
 
         }
 
