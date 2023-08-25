@@ -23,13 +23,13 @@ create table Cliente(
 create table Conta(
 	idconta int identity (1,1),
 	idcliente int not null,
-	saldo numeric (10,2),
-	limite numeric (10,2),
+	saldo numeric (10,2) not null,
+	limite numeric (10,2)not null,
 	tipoconta varchar(30) not null,
-	statusconta varchar(20),
-	aberturaconta datetime,
+	statusconta varchar(20) not null,
+	aberturaconta datetime not null,
 	encerramentoconta datetime,
-	senhaConta char (8),
+	senhaConta char (8) not null,
 
 	constraint pk_Conta primary key (idconta),
 	constraint	ck_status_conta check (statusconta in ('Ativa','Inativa','Em Análise','Bloqueada')),
