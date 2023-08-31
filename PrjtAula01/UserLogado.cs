@@ -24,7 +24,7 @@ namespace PrjtAula01
         public static string? Rg { get; set; }
         public static string? Cep { get; set; }
         public static string? Genero { get; set; }
-        public static double? Renda { get; set; }
+        public static Decimal Renda { get; set; }
         
 
 
