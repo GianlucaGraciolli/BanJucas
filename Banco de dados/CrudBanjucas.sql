@@ -23,3 +23,25 @@ where idcliente = @idcliente
 
 exec ps_buscaContasPorIdCliente 1
 
+create procedure pi_Cliente 
+@nome varchar (120),
+@cpf char (11),
+@rg char (9),
+@celular varchar (20),
+@email varchar (200),
+@logradouro varchar (200),
+@numerologradouro varchar (5),
+@cep char (8),
+@cidade varchar (30),
+@estado char (2),
+@genero varchar (20),
+@datanasc datetime,
+@renda numeric (10,2),
+@senhalogin char (6)
+as 
+insert into Cliente
+values (@nome,@cpf,@rg,@celular,@email,@logradouro,@numerologradouro,@cep,@cidade,@estado,@genero,@datanasc,@renda,@senhalogin)
+
+exec pi_Cliente ('baixo é ele','12345678900',null,'13921392193','baixo.baixola@senac.edu','rua do pequeno','30312','11290845','baixos','pequenote',''
+
+select * from Cliente

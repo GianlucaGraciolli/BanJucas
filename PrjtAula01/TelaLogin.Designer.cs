@@ -30,8 +30,6 @@
         {
             menu = new MenuStrip();
             loginToolStripMenuItem = new ToolStripMenuItem();
-            logarToolStripMenuItem = new ToolStripMenuItem();
-            cadastrarToolStripMenuItem = new ToolStripMenuItem();
             extratoToolStripMenuItem = new ToolStripMenuItem();
             pagamentosToolStripMenuItem = new ToolStripMenuItem();
             operaçõesToolStripMenuItem = new ToolStripMenuItem();
@@ -44,13 +42,14 @@
             alterarSenhaToolStripMenuItem = new ToolStripMenuItem();
             nomeToolStripMenuItem = new ToolStripMenuItem();
             contaToolStripMenuItem = new ToolStripMenuItem();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
             // menu
             // 
             menu.AutoSize = false;
-            menu.Items.AddRange(new ToolStripItem[] { loginToolStripMenuItem, extratoToolStripMenuItem, pagamentosToolStripMenuItem, operaçõesToolStripMenuItem, agendamentosToolStripMenuItem, configuraçõesToolStripMenuItem, nomeToolStripMenuItem, contaToolStripMenuItem });
+            menu.Items.AddRange(new ToolStripItem[] { loginToolStripMenuItem, cadastroToolStripMenuItem, extratoToolStripMenuItem, pagamentosToolStripMenuItem, operaçõesToolStripMenuItem, agendamentosToolStripMenuItem, configuraçõesToolStripMenuItem, nomeToolStripMenuItem, contaToolStripMenuItem });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
             menu.Size = new Size(1098, 27);
@@ -59,25 +58,10 @@
             // 
             // loginToolStripMenuItem
             // 
-            loginToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { logarToolStripMenuItem, cadastrarToolStripMenuItem });
             loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new Size(50, 23);
-            loginToolStripMenuItem.Text = "Entrar";
+            loginToolStripMenuItem.Size = new Size(49, 23);
+            loginToolStripMenuItem.Text = "Login";
             loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
-            // 
-            // logarToolStripMenuItem
-            // 
-            logarToolStripMenuItem.Name = "logarToolStripMenuItem";
-            logarToolStripMenuItem.Size = new Size(180, 22);
-            logarToolStripMenuItem.Text = "Logar";
-            logarToolStripMenuItem.Click += logarToolStripMenuItem_Click;
-            // 
-            // cadastrarToolStripMenuItem
-            // 
-            cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            cadastrarToolStripMenuItem.Size = new Size(180, 22);
-            cadastrarToolStripMenuItem.Text = "Cadastrar";
-            cadastrarToolStripMenuItem.Click += cadastrarToolStripMenuItem_Click;
             // 
             // extratoToolStripMenuItem
             // 
@@ -163,6 +147,13 @@
             contaToolStripMenuItem.Text = "Conta";
             contaToolStripMenuItem.Visible = false;
             // 
+            // cadastroToolStripMenuItem
+            // 
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(66, 23);
+            cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click_1;
+            // 
             // TelaLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -192,10 +183,9 @@
         private ToolStripMenuItem configuraçõesToolStripMenuItem;
         private ToolStripMenuItem alterarDadosToolStripMenuItem;
         private ToolStripMenuItem alterarSenhaToolStripMenuItem;
-        private ToolStripMenuItem logarToolStripMenuItem;
-        private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem extratoToolStripMenuItem;
         private ToolStripMenuItem nomeToolStripMenuItem;
         private ToolStripMenuItem contaToolStripMenuItem;
+        private ToolStripMenuItem cadastroToolStripMenuItem;
     }
 }

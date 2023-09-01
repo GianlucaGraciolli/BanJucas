@@ -34,7 +34,6 @@
             txtRgCad = new TextBox();
             txtCelCad = new TextBox();
             txtEmailCad = new TextBox();
-            txtDataNascCad = new TextBox();
             txtRendaCad = new TextBox();
             txtCEPCad = new TextBox();
             txtGeneroCad = new TextBox();
@@ -49,8 +48,9 @@
             lblValorMin = new Label();
             txtLogradCad = new TextBox();
             txtCidadeCad = new TextBox();
-            txtEstadoCad = new TextBox();
             txtNumLogCad = new TextBox();
+            cbEstado = new ComboBox();
+            dtpNasc = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             txtNomeCad.Size = new Size(300, 29);
             txtNomeCad.TabIndex = 0;
             txtNomeCad.TextAlign = HorizontalAlignment.Center;
+            txtNomeCad.TextChanged += txtNomeCad_TextChanged;
             // 
             // txtCpfCad
             // 
@@ -104,25 +105,16 @@
             txtEmailCad.TabIndex = 4;
             txtEmailCad.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtDataNascCad
-            // 
-            txtDataNascCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDataNascCad.Location = new Point(135, 283);
-            txtDataNascCad.Name = "txtDataNascCad";
-            txtDataNascCad.PlaceholderText = "Data de Nascimento";
-            txtDataNascCad.Size = new Size(300, 29);
-            txtDataNascCad.TabIndex = 5;
-            txtDataNascCad.TextAlign = HorizontalAlignment.Center;
-            // 
             // txtRendaCad
             // 
             txtRendaCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRendaCad.Location = new Point(135, 528);
+            txtRendaCad.Location = new Point(135, 493);
             txtRendaCad.Name = "txtRendaCad";
             txtRendaCad.PlaceholderText = "Renda Mensal";
             txtRendaCad.Size = new Size(300, 29);
-            txtRendaCad.TabIndex = 8;
+            txtRendaCad.TabIndex = 12;
             txtRendaCad.TextAlign = HorizontalAlignment.Center;
+            txtRendaCad.TextChanged += txtRendaCad_TextChanged;
             // 
             // txtCEPCad
             // 
@@ -147,42 +139,43 @@
             // txtConfSenhaCad
             // 
             txtConfSenhaCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtConfSenhaCad.Location = new Point(794, 158);
+            txtConfSenhaCad.Location = new Point(784, 334);
             txtConfSenhaCad.Name = "txtConfSenhaCad";
             txtConfSenhaCad.PlaceholderText = "Confirme sua senha";
             txtConfSenhaCad.Size = new Size(300, 29);
-            txtConfSenhaCad.TabIndex = 10;
+            txtConfSenhaCad.TabIndex = 15;
             txtConfSenhaCad.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSenhaCad
             // 
             txtSenhaCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSenhaCad.Location = new Point(794, 107);
+            txtSenhaCad.Location = new Point(784, 283);
             txtSenhaCad.Name = "txtSenhaCad";
             txtSenhaCad.PlaceholderText = "Crie sua senha";
             txtSenhaCad.Size = new Size(300, 29);
-            txtSenhaCad.TabIndex = 9;
+            txtSenhaCad.TabIndex = 14;
             txtSenhaCad.TextAlign = HorizontalAlignment.Center;
             // 
             // btAcessoCad
             // 
             btAcessoCad.BackColor = Color.White;
             btAcessoCad.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            btAcessoCad.Location = new Point(855, 418);
+            btAcessoCad.Location = new Point(840, 407);
             btAcessoCad.Name = "btAcessoCad";
             btAcessoCad.Size = new Size(203, 54);
-            btAcessoCad.TabIndex = 12;
+            btAcessoCad.TabIndex = 16;
             btAcessoCad.Text = "Criar Acesso";
             btAcessoCad.UseVisualStyleBackColor = false;
+            btAcessoCad.Click += btAcessoCad_Click;
             // 
             // btVoltarCad
             // 
             btVoltarCad.BackColor = Color.White;
             btVoltarCad.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            btVoltarCad.Location = new Point(855, 495);
+            btVoltarCad.Location = new Point(840, 493);
             btVoltarCad.Name = "btVoltarCad";
             btVoltarCad.Size = new Size(203, 54);
-            btVoltarCad.TabIndex = 13;
+            btVoltarCad.TabIndex = 17;
             btVoltarCad.Text = "Voltar";
             btVoltarCad.UseVisualStyleBackColor = false;
             // 
@@ -210,11 +203,11 @@
             // txtValDepCad
             // 
             txtValDepCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtValDepCad.Location = new Point(794, 328);
+            txtValDepCad.Location = new Point(784, 124);
             txtValDepCad.Name = "txtValDepCad";
             txtValDepCad.PlaceholderText = "R$ 0,00";
             txtValDepCad.Size = new Size(300, 29);
-            txtValDepCad.TabIndex = 11;
+            txtValDepCad.TabIndex = 13;
             txtValDepCad.TextAlign = HorizontalAlignment.Center;
             // 
             // lblDepInicial
@@ -222,7 +215,7 @@
             lblDepInicial.AutoSize = true;
             lblDepInicial.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblDepInicial.ForeColor = Color.White;
-            lblDepInicial.Location = new Point(794, 249);
+            lblDepInicial.Location = new Point(784, 45);
             lblDepInicial.Name = "lblDepInicial";
             lblDepInicial.Size = new Size(295, 28);
             lblDepInicial.TabIndex = 17;
@@ -234,7 +227,7 @@
             lblValorMin.AutoSize = true;
             lblValorMin.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblValorMin.ForeColor = Color.White;
-            lblValorMin.Location = new Point(865, 277);
+            lblValorMin.Location = new Point(855, 73);
             lblValorMin.Name = "lblValorMin";
             lblValorMin.Size = new Size(161, 28);
             lblValorMin.TabIndex = 18;
@@ -247,7 +240,7 @@
             txtLogradCad.Name = "txtLogradCad";
             txtLogradCad.PlaceholderText = "Logradouro";
             txtLogradCad.Size = new Size(300, 29);
-            txtLogradCad.TabIndex = 19;
+            txtLogradCad.TabIndex = 8;
             txtLogradCad.TextAlign = HorizontalAlignment.Center;
             // 
             // txtCidadeCad
@@ -256,20 +249,10 @@
             txtCidadeCad.Location = new Point(135, 458);
             txtCidadeCad.Name = "txtCidadeCad";
             txtCidadeCad.PlaceholderText = "Cidade";
-            txtCidadeCad.Size = new Size(300, 29);
-            txtCidadeCad.TabIndex = 21;
+            txtCidadeCad.Size = new Size(224, 29);
+            txtCidadeCad.TabIndex = 10;
             txtCidadeCad.TextAlign = HorizontalAlignment.Center;
             txtCidadeCad.TextChanged += textBox2_TextChanged;
-            // 
-            // txtEstadoCad
-            // 
-            txtEstadoCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEstadoCad.Location = new Point(135, 493);
-            txtEstadoCad.Name = "txtEstadoCad";
-            txtEstadoCad.PlaceholderText = "Estado";
-            txtEstadoCad.Size = new Size(300, 29);
-            txtEstadoCad.TabIndex = 22;
-            txtEstadoCad.TextAlign = HorizontalAlignment.Center;
             // 
             // txtNumLogCad
             // 
@@ -278,8 +261,29 @@
             txtNumLogCad.Name = "txtNumLogCad";
             txtNumLogCad.PlaceholderText = "Numero Logradouro";
             txtNumLogCad.Size = new Size(300, 29);
-            txtNumLogCad.TabIndex = 23;
+            txtNumLogCad.TabIndex = 9;
             txtNumLogCad.TextAlign = HorizontalAlignment.Center;
+            txtNumLogCad.TextChanged += txtNumLogCad_TextChanged;
+            // 
+            // cbEstado
+            // 
+            cbEstado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            cbEstado.Location = new Point(365, 458);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(70, 29);
+            cbEstado.TabIndex = 11;
+            cbEstado.Text = "UF";
+            cbEstado.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // dtpNasc
+            // 
+            dtpNasc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpNasc.Location = new Point(135, 283);
+            dtpNasc.Name = "dtpNasc";
+            dtpNasc.Size = new Size(300, 29);
+            dtpNasc.TabIndex = 5;
             // 
             // TelaCadastro
             // 
@@ -287,8 +291,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 143, 235);
             ClientSize = new Size(1218, 636);
+            Controls.Add(dtpNasc);
+            Controls.Add(cbEstado);
             Controls.Add(txtNumLogCad);
-            Controls.Add(txtEstadoCad);
             Controls.Add(txtCidadeCad);
             Controls.Add(txtLogradCad);
             Controls.Add(lblValorMin);
@@ -303,7 +308,6 @@
             Controls.Add(txtRendaCad);
             Controls.Add(txtCEPCad);
             Controls.Add(txtGeneroCad);
-            Controls.Add(txtDataNascCad);
             Controls.Add(txtEmailCad);
             Controls.Add(txtCelCad);
             Controls.Add(txtRgCad);
@@ -311,6 +315,7 @@
             Controls.Add(txtNomeCad);
             Name = "TelaCadastro";
             Text = "Tela Cadastro";
+            Load += TelaCadastro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -323,7 +328,6 @@
         private TextBox txtRgCad;
         private TextBox txtCelCad;
         private TextBox txtEmailCad;
-        private TextBox txtDataNascCad;
         private TextBox txtRendaCad;
         private TextBox txtCEPCad;
         private TextBox txtGeneroCad;
@@ -338,7 +342,8 @@
         private Label lblValorMin;
         private TextBox txtLogradCad;
         private TextBox txtCidadeCad;
-        private TextBox txtEstadoCad;
         private TextBox txtNumLogCad;
+        private ComboBox cbEstado;
+        private DateTimePicker dtpNasc;
     }
 }

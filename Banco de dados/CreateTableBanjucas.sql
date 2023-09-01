@@ -1,17 +1,17 @@
-use BanjucasDkt
+	use BanjucasDkt
 
 create table Cliente(
 	idCliente int identity (1,1),
 	nome varchar (120) not null,
 	cpf char (11) not null unique,
-	rg char (9) unique,
+	rg char (9),
 	celular varchar (20) not null,
 	email varchar (200) not null,
 	logradouro varchar (200) not null,
 	numerologradouro varchar (5) not null,
 	cep char (8) not null,
 	cidade varchar (30) not null,
-	estado varchar (30) not null,
+	estado char (2) not null,
 	genero varchar (20) not null,
 	datanasc datetime not null,
 	renda numeric (10,2) not null,

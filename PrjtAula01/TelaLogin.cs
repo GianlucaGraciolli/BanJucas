@@ -22,7 +22,26 @@ namespace PrjtAula01
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.menu.Items[0].Text == "Login")
+            {
+                TelaLoginPrincipal telaLoginPrin = new TelaLoginPrincipal();
+                telaLoginPrin.MdiParent = this;
+                telaLoginPrin.Show();
+            }
+            else
+            {
+                menu.Items[0].Text = "Login";
+                menu.Items[1].Visible = false;
+                menu.Items[2].Visible = false;
+                menu.Items[3].Visible = false;
+                menu.Items[4].Visible = false;
+                menu.Items[5].Visible = false;
+                menu.Items[6].Visible = false;
+                menu.Items[6].Text = String.Empty;
+                menu.Items[7].Visible = false;
+                menu.Items[7].Text = String.Empty;
+                UsuarioLogado.Deslogar();
+            }
         }
 
         private void TelaLogin_Load(object sender, EventArgs e)
@@ -71,26 +90,7 @@ namespace PrjtAula01
 
         private void logarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.menu.Items[0].Text == "Logar")
-            {
-                TelaLoginPrincipal telaLoginPrin = new TelaLoginPrincipal();
-                telaLoginPrin.MdiParent = this;
-                telaLoginPrin.Show();
-            }
-            else
-            {
-                menu.Items[0].Text = "Logar";
-                menu.Items[1].Visible = false;
-                menu.Items[2].Visible = false;
-                menu.Items[3].Visible = false;
-                menu.Items[4].Visible = false;
-                menu.Items[5].Visible = false;
-                menu.Items[6].Visible = false;
-                menu.Items[6].Text = String.Empty;                
-                menu.Items[7].Visible = false;
-                menu.Items[7].Text = String.Empty;
-                UsuarioLogado.Deslogar();
-            }
+
 
 
             // instanciei a classe / criei o objeto
@@ -105,9 +105,14 @@ namespace PrjtAula01
 
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TelaCadastro janelaCadastro = new TelaCadastro();
-            janelaCadastro.MdiParent = this;
-            janelaCadastro.Show();
+
+        }
+
+        private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TelaCadastro telaCadastro = new TelaCadastro();
+            telaCadastro.MdiParent = this;
+            telaCadastro.Show();
         }
     }
 }

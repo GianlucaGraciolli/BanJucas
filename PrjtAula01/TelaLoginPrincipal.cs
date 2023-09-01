@@ -235,7 +235,7 @@ namespace PrjtAula01
 
         private void TelaLoginPrincipal_Load(object sender, EventArgs e)
         {
-
+                
         }
     }
 }
