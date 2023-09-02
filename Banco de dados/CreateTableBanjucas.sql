@@ -1,4 +1,4 @@
-	use BanjucasDkt
+		use BanjucasDkt
 
 create table Cliente(
 	idCliente int identity (1,1),

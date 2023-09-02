@@ -30,6 +30,8 @@
         {
             menu = new MenuStrip();
             loginToolStripMenuItem = new ToolStripMenuItem();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
+            criarContaToolStripMenuItem = new ToolStripMenuItem();
             extratoToolStripMenuItem = new ToolStripMenuItem();
             pagamentosToolStripMenuItem = new ToolStripMenuItem();
             operaçõesToolStripMenuItem = new ToolStripMenuItem();
@@ -42,14 +44,13 @@
             alterarSenhaToolStripMenuItem = new ToolStripMenuItem();
             nomeToolStripMenuItem = new ToolStripMenuItem();
             contaToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
             // menu
             // 
             menu.AutoSize = false;
-            menu.Items.AddRange(new ToolStripItem[] { loginToolStripMenuItem, cadastroToolStripMenuItem, extratoToolStripMenuItem, pagamentosToolStripMenuItem, operaçõesToolStripMenuItem, agendamentosToolStripMenuItem, configuraçõesToolStripMenuItem, nomeToolStripMenuItem, contaToolStripMenuItem });
+            menu.Items.AddRange(new ToolStripItem[] { loginToolStripMenuItem, cadastroToolStripMenuItem, criarContaToolStripMenuItem, extratoToolStripMenuItem, pagamentosToolStripMenuItem, operaçõesToolStripMenuItem, agendamentosToolStripMenuItem, configuraçõesToolStripMenuItem, nomeToolStripMenuItem, contaToolStripMenuItem });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
             menu.Size = new Size(1098, 27);
@@ -62,6 +63,21 @@
             loginToolStripMenuItem.Size = new Size(49, 23);
             loginToolStripMenuItem.Text = "Login";
             loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(66, 23);
+            cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click_1;
+            // 
+            // criarContaToolStripMenuItem
+            // 
+            criarContaToolStripMenuItem.Name = "criarContaToolStripMenuItem";
+            criarContaToolStripMenuItem.Size = new Size(79, 23);
+            criarContaToolStripMenuItem.Text = "Criar Conta";
+            criarContaToolStripMenuItem.Visible = false;
+            criarContaToolStripMenuItem.Click += criarContaToolStripMenuItem_Click;
             // 
             // extratoToolStripMenuItem
             // 
@@ -124,14 +140,16 @@
             // alterarDadosToolStripMenuItem
             // 
             alterarDadosToolStripMenuItem.Name = "alterarDadosToolStripMenuItem";
-            alterarDadosToolStripMenuItem.Size = new Size(145, 22);
+            alterarDadosToolStripMenuItem.Size = new Size(180, 22);
             alterarDadosToolStripMenuItem.Text = "Alterar Dados";
+            alterarDadosToolStripMenuItem.Click += alterarDadosToolStripMenuItem_Click;
             // 
             // alterarSenhaToolStripMenuItem
             // 
             alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            alterarSenhaToolStripMenuItem.Size = new Size(145, 22);
+            alterarSenhaToolStripMenuItem.Size = new Size(180, 22);
             alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
+            alterarSenhaToolStripMenuItem.Click += alterarSenhaToolStripMenuItem_Click;
             // 
             // nomeToolStripMenuItem
             // 
@@ -146,13 +164,6 @@
             contaToolStripMenuItem.Size = new Size(51, 23);
             contaToolStripMenuItem.Text = "Conta";
             contaToolStripMenuItem.Visible = false;
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(66, 23);
-            cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click_1;
             // 
             // TelaLogin
             // 
@@ -187,5 +198,6 @@
         private ToolStripMenuItem nomeToolStripMenuItem;
         private ToolStripMenuItem contaToolStripMenuItem;
         private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem criarContaToolStripMenuItem;
     }
 }

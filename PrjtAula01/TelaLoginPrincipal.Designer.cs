@@ -75,7 +75,7 @@
             BotaoEntrar.Cursor = Cursors.Hand;
             BotaoEntrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             BotaoEntrar.ForeColor = Color.Black;
-            BotaoEntrar.Location = new Point(953, 320);
+            BotaoEntrar.Location = new Point(954, 321);
             BotaoEntrar.Name = "BotaoEntrar";
             BotaoEntrar.Size = new Size(96, 34);
             BotaoEntrar.TabIndex = 2;

@@ -88,15 +88,15 @@ namespace PrjtAula01
                     cmd.Parameters.AddWithValue("cidade", txtCidadeCad.Text);
                     cmd.Parameters.AddWithValue("estado", cbEstado.Text);
                     cmd.Parameters.AddWithValue("genero", txtGeneroCad.Text);
-                    cmd.Parameters.AddWithValue("datanasc",Convert.ToDateTime(dtpNasc.Text));
-                    cmd.Parameters.AddWithValue("renda",txtRendaCad.Text);
-                    cmd.Parameters.AddWithValue("senhalogin",txtSenhaCad.Text);
+                    cmd.Parameters.AddWithValue("datanasc", Convert.ToDateTime(dtpNasc.Text));
+                    cmd.Parameters.AddWithValue("renda", txtRendaCad.Text);
+                    cmd.Parameters.AddWithValue("senhalogin", txtSenhaCad.Text);
 
                     //abrir conexão
                     conexao.Open();
                     cmd.ExecuteNonQuery();//Executa o comando no BD
                     conexao.Close();
-                    MessageBox.Show("Cliente cadastrado com sucesso!","Info",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente cadastrado com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UIClear.CleanTxtBoxes(this);
                 }
                 else
@@ -107,7 +107,7 @@ namespace PrjtAula01
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message,"ERRO",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

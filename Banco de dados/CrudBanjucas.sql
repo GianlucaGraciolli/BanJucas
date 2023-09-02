@@ -45,3 +45,27 @@ values (@nome,@cpf,@rg,@celular,@email,@logradouro,@numerologradouro,@cep,@cidad
 exec pi_Cliente ('baixo é ele','12345678900',null,'13921392193','baixo.baixola@senac.edu','rua do pequeno','30312','11290845','baixos','pequenote',''
 
 select * from Cliente
+
+/*criar conta*/
+create procedure pi_Conta
+@idcliente int,
+@aberturaconta datetime,
+@saldo numeric(10,2),
+@statusconta varchar(10),
+@tipoconta varchar(30),
+@limite numeric(10,2),
+@senhaconta char(8)
+as
+insert into conta (idcliente,aberturaconta,saldo,statusConta,tipoconta,limite,senhaconta)
+values (@idcliente,@aberturaconta,@saldo,@statusConta,@tipoconta, @limite, @senhaconta)
+select @@identity as 'ultimoID'
+
+create procedure pu_AlterarSenha
+@idCliente int,
+@senhaLogin char (6)
+as
+update Cliente
+set senhaLogin = @senhaLogin
+where idCliente = @idCliente	
+
+exec pu_AlterarSenha 1,'000000'

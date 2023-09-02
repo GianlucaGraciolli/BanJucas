@@ -31,15 +31,16 @@ namespace PrjtAula01
             else
             {
                 menu.Items[0].Text = "Login";
-                menu.Items[1].Visible = false;
+                menu.Items[1].Visible = true;
                 menu.Items[2].Visible = false;
                 menu.Items[3].Visible = false;
                 menu.Items[4].Visible = false;
                 menu.Items[5].Visible = false;
                 menu.Items[6].Visible = false;
-                menu.Items[6].Text = String.Empty;
                 menu.Items[7].Visible = false;
                 menu.Items[7].Text = String.Empty;
+                menu.Items[8].Visible = false;
+                menu.Items[8].Text = String.Empty;
                 UsuarioLogado.Deslogar();
             }
         }
@@ -113,6 +114,28 @@ namespace PrjtAula01
             TelaCadastro telaCadastro = new TelaCadastro();
             telaCadastro.MdiParent = this;
             telaCadastro.Show();
+        }
+
+        private void criarContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCriarConta telaCriarConta = new TelaCriarConta();
+            telaCriarConta.MdiParent = this;
+            telaCriarConta.Show();
+        }
+
+        private void alterarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlterarDados alterarDados = new AlterarDados();
+            alterarDados.MdiParent = this;
+            alterarDados.Show();
+        }
+
+        private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlterarSenha alterarSenha = new AlterarSenha();
+            
+           alterarSenha.MdiParent = this;
+           alterarSenha.Show();
         }
     }
 }

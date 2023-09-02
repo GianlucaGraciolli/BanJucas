@@ -15,7 +15,7 @@ namespace DTO
         public decimal Saldo { get; set; }
         public decimal Limite { get; set; }
         public DateTime AberturaConta { get; set; }
-        public DateTime EncerramentoConta { get; set; }
+        public DateTime? EncerramentoConta { get; set; }
         public string SenhaConta { get; set; }
     }
 }
