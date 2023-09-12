@@ -1,10 +1,10 @@
 use BanjucasDkt
 
 insert into Cliente
-values ('Rogerin querô','23496834052',null,'13981777435','rogerinzika@hotmail.com','rua jornalista donato ribeiro','343','11530190','Cubatão','São Paulo','Masculino','06/12/2002',10000,'061202')
+values ('Rogerin querô','23496834052',null,'13981777435','rogerinzika@hotmail.com','rua jornalista donato ribeiro','343','11530190','Cubatão','SP','Masculino','06/12/2002',10000,'061202')
 
 insert into Conta
-values (1,500,20,'Corrente','Ativa','03/09/2009',5000,'121212')
+values (2,500,20,'Corrente','Ativa','03/09/2009',5000,'000000')
 
 create procedure ps_ValidarLogin
 @cpf char (11),
@@ -69,3 +69,14 @@ set senhaLogin = @senhaLogin
 where idCliente = @idCliente	
 
 exec pu_AlterarSenha 1,'000000'
+
+create procedure ps_ValidarSenhaConta
+@idconta int,
+@senhaConta char (6)
+as
+select * from Conta
+where idconta = @idconta and senhaConta = @senhaConta
+
+exec ps_AlterarContas 2,'000000'
+
+drop procedure ps_AlterarContas

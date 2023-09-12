@@ -29,7 +29,7 @@ create table Conta(
 	statusconta varchar(20) not null,
 	aberturaconta datetime not null,
 	encerramentoconta datetime,
-	senhaConta char (8) not null,
+	senhaConta char (6) not null,
 
 	constraint pk_Conta primary key (idconta),
 	constraint	ck_status_conta check (statusconta in ('Ativa','Inativa','Em Análise','Bloqueada')),

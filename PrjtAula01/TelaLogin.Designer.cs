@@ -44,6 +44,8 @@
             alterarSenhaToolStripMenuItem = new ToolStripMenuItem();
             nomeToolStripMenuItem = new ToolStripMenuItem();
             contaToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            alterarContaToolStripMenuItem = new ToolStripMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -131,7 +133,7 @@
             // 
             // configuraçõesToolStripMenuItem
             // 
-            configuraçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alterarDadosToolStripMenuItem, alterarSenhaToolStripMenuItem });
+            configuraçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alterarDadosToolStripMenuItem, alterarSenhaToolStripMenuItem, toolStripSeparator1, alterarContaToolStripMenuItem });
             configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
             configuraçõesToolStripMenuItem.Size = new Size(96, 23);
             configuraçõesToolStripMenuItem.Text = "Configurações";
@@ -140,14 +142,14 @@
             // alterarDadosToolStripMenuItem
             // 
             alterarDadosToolStripMenuItem.Name = "alterarDadosToolStripMenuItem";
-            alterarDadosToolStripMenuItem.Size = new Size(180, 22);
+            alterarDadosToolStripMenuItem.Size = new Size(145, 22);
             alterarDadosToolStripMenuItem.Text = "Alterar Dados";
             alterarDadosToolStripMenuItem.Click += alterarDadosToolStripMenuItem_Click;
             // 
             // alterarSenhaToolStripMenuItem
             // 
             alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            alterarSenhaToolStripMenuItem.Size = new Size(180, 22);
+            alterarSenhaToolStripMenuItem.Size = new Size(145, 22);
             alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             alterarSenhaToolStripMenuItem.Click += alterarSenhaToolStripMenuItem_Click;
             // 
@@ -164,6 +166,18 @@
             contaToolStripMenuItem.Size = new Size(51, 23);
             contaToolStripMenuItem.Text = "Conta";
             contaToolStripMenuItem.Visible = false;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(142, 6);
+            // 
+            // alterarContaToolStripMenuItem
+            // 
+            alterarContaToolStripMenuItem.Name = "alterarContaToolStripMenuItem";
+            alterarContaToolStripMenuItem.Size = new Size(180, 22);
+            alterarContaToolStripMenuItem.Text = "Alterar Conta";
+            alterarContaToolStripMenuItem.Click += alterarContaToolStripMenuItem_Click;
             // 
             // TelaLogin
             // 
@@ -199,5 +213,7 @@
         private ToolStripMenuItem contaToolStripMenuItem;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem criarContaToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem alterarContaToolStripMenuItem;
     }
 }

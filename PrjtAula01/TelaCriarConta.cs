@@ -60,7 +60,7 @@ namespace PrjtAula01
                     cmd.Parameters.AddWithValue("statusConta", conta.StatusConta);
                     cmd.Parameters.AddWithValue("statusConta", conta.TipoConta);
                     cmd.Parameters.AddWithValue("statusConta", conta.Limite);
-                    cmd.Parameters.AddWithValue("senha", conta.SenhaConta);
+                    cmd.Parameters.AddWithValue("senhaconta", conta.SenhaConta);
 
                     //abrir a conexão
                     conexao.Open();

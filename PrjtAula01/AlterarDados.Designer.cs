@@ -217,6 +217,7 @@
             salvarBotaoAlt.TabIndex = 33;
             salvarBotaoAlt.Text = "Salvar";
             salvarBotaoAlt.UseVisualStyleBackColor = true;
+            salvarBotaoAlt.Click += salvarBotaoAlt_Click;
             // 
             // AlterarDados
             // 

@@ -33,5 +33,10 @@ namespace PrjtAula01
             cbEstadoAlt.Text = UsuarioLogado.Estado;
             txtRendaAlt.Text = Convert.ToString(UsuarioLogado.Renda);
         }
+
+        private void salvarBotaoAlt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

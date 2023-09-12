@@ -24,11 +24,12 @@ namespace PrjtAula01
         {
             try
             {
+
                 if (txtSenhaAlterar.Text == txtConfSenhaAlt.Text)
                 {
                     SqlConnection conexao =
-            new SqlConnection(ConfigurationManager.ConnectionStrings["PrjtAula01.Properties.Settings.strConexao"].ToString());
-                    
+                    new SqlConnection(ConfigurationManager.ConnectionStrings["PrjtAula01.Properties.Settings.strConexao"].ToString());
+
 
                     SqlCommand cmd = new SqlCommand();
 
@@ -37,7 +38,7 @@ namespace PrjtAula01
                     cmd.Connection = conexao;
 
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("idCliente",UsuarioLogado.IdCliente);
+                    cmd.Parameters.AddWithValue("idCliente", UsuarioLogado.IdCliente);
                     cmd.Parameters.AddWithValue("senhaLogin", txtSenhaAlterar.Text);
 
                     conexao.Open();
@@ -46,17 +47,23 @@ namespace PrjtAula01
                     MessageBox.Show("Senha alterada com sucesso!", "Info!");
                     UIClear.CleanTxtBoxes(this);
                 }
+
                 else
                 {
                     throw new Exception("ERRO DOIDÃO, ACERTA ISSO");
                 }
-                
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void AlterarSenha_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

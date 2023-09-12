@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarSenha));
             lblAlterarSenha = new Label();
             txtConfSenhaAlt = new TextBox();
             txtSenhaAlterar = new TextBox();
             salvarBotaoAltSenha = new Button();
+            txtSenhaAtual = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblAlterarSenha
@@ -48,7 +52,7 @@
             // txtConfSenhaAlt
             // 
             txtConfSenhaAlt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtConfSenhaAlt.Location = new Point(136, 258);
+            txtConfSenhaAlt.Location = new Point(136, 346);
             txtConfSenhaAlt.Name = "txtConfSenhaAlt";
             txtConfSenhaAlt.PlaceholderText = "Confirme sua nova senha";
             txtConfSenhaAlt.Size = new Size(300, 29);
@@ -58,7 +62,7 @@
             // txtSenhaAlterar
             // 
             txtSenhaAlterar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSenhaAlterar.Location = new Point(136, 163);
+            txtSenhaAlterar.Location = new Point(136, 301);
             txtSenhaAlterar.Name = "txtSenhaAlterar";
             txtSenhaAlterar.PlaceholderText = "Nova senha";
             txtSenhaAlterar.Size = new Size(300, 29);
@@ -68,7 +72,7 @@
             // salvarBotaoAltSenha
             // 
             salvarBotaoAltSenha.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            salvarBotaoAltSenha.Location = new Point(198, 325);
+            salvarBotaoAltSenha.Location = new Point(207, 395);
             salvarBotaoAltSenha.Name = "salvarBotaoAltSenha";
             salvarBotaoAltSenha.Size = new Size(175, 53);
             salvarBotaoAltSenha.TabIndex = 35;
@@ -76,18 +80,41 @@
             salvarBotaoAltSenha.UseVisualStyleBackColor = true;
             salvarBotaoAltSenha.Click += salvarBotaoAltSenha_Click;
             // 
+            // txtSenhaAtual
+            // 
+            txtSenhaAtual.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenhaAtual.Location = new Point(136, 108);
+            txtSenhaAtual.Name = "txtSenhaAtual";
+            txtSenhaAtual.PlaceholderText = "Digite sua senha atual";
+            txtSenhaAtual.Size = new Size(300, 29);
+            txtSenhaAtual.TabIndex = 36;
+            txtSenhaAtual.TextAlign = HorizontalAlignment.Center;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(227, 156);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(130, 124);
+            pictureBox1.TabIndex = 37;
+            pictureBox1.TabStop = false;
+            // 
             // AlterarSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 143, 235);
             ClientSize = new Size(573, 450);
+            Controls.Add(pictureBox1);
+            Controls.Add(txtSenhaAtual);
             Controls.Add(salvarBotaoAltSenha);
             Controls.Add(txtConfSenhaAlt);
             Controls.Add(txtSenhaAlterar);
             Controls.Add(lblAlterarSenha);
             Name = "AlterarSenha";
             Text = "AlterarSenha";
+            Load += AlterarSenha_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -98,5 +125,7 @@
         private TextBox txtConfSenhaAlt;
         private TextBox txtSenhaAlterar;
         private Button salvarBotaoAltSenha;
+        private TextBox txtSenhaAtual;
+        private PictureBox pictureBox1;
     }
 }

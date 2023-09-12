@@ -133,9 +133,14 @@ namespace PrjtAula01
         private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AlterarSenha alterarSenha = new AlterarSenha();
-            
-           alterarSenha.MdiParent = this;
-           alterarSenha.Show();
+
+            alterarSenha.MdiParent = this;
+            alterarSenha.Show();
+        }
+
+        private void alterarContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
