@@ -95,7 +95,10 @@ namespace PrjtAula01
                         conta.TipoConta = leitor.GetString(4);
                         conta.StatusConta = leitor.GetString(5);
                         conta.AberturaConta = leitor.GetDateTime(6);
-                        conta.EncerramentoConta = leitor.GetDateTime(7);
+                            if (!leitor.IsDBNull(7))
+                            {
+                                conta.EncerramentoConta = leitor.GetDateTime(7);
+                            }                                
                         conta.SenhaConta = leitor.GetString(8);
 
                         //adiciona a conta recém criada na memória para a colection de contas
@@ -126,7 +129,7 @@ namespace PrjtAula01
                 }
                 else
                 {
-                    menuPrincipal.Items[9].Text = $"Conta:{UsuarioLogado.Contas[0].IdCliente.ToString()}";
+                    menuPrincipal.Items[9].Text = $"Conta: {UsuarioLogado.Contas[0].IdCliente.ToString()}";
 
                     MessageBox.Show($"Olá,{UsuarioLogado.Nome}!\n" +
                         $"Você foi logado na conta {UsuarioLogado.Contas[0].IdCliente.ToString()}\n" +

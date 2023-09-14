@@ -45,6 +45,7 @@ values (@nome,@cpf,@rg,@celular,@email,@logradouro,@numerologradouro,@cep,@cidad
 exec pi_Cliente ('baixo é ele','12345678900',null,'13921392193','baixo.baixola@senac.edu','rua do pequeno','30312','11290845','baixos','pequenote',''
 
 select * from Cliente
+select * from Conta
 
 /*criar conta*/
 create procedure pi_Conta
@@ -59,6 +60,8 @@ as
 insert into conta (idcliente,aberturaconta,saldo,statusConta,tipoconta,limite,senhaconta)
 values (@idcliente,@aberturaconta,@saldo,@statusConta,@tipoconta, @limite, @senhaconta)
 select @@identity as 'ultimoID'
+
+drop procedure pi_Conta
 
 create procedure pu_AlterarSenha
 @idCliente int,
@@ -80,3 +83,37 @@ where idconta = @idconta and senhaConta = @senhaConta
 exec ps_AlterarContas 2,'000000'
 
 drop procedure ps_AlterarContas
+
+create procedure pu_alterarDados
+@idCliente int,
+@nome varchar(120),
+@cpf char(11),
+@rg char(9),
+@celular varchar(20),
+@email varchar(200),
+@logradouro varchar(200),
+@numerologradouro varchar(5),
+@cep char(8),
+@cidade varchar(30),
+@estado char(2),
+@genero varchar(20),
+@datanasc datetime,
+@renda numeric(10,2),
+@senhaLogin char(6)
+as 
+update Cliente
+set 
+nome = @nome,
+cpf = @cpf,
+rg = @rg,
+celular = @celular,
+email = @email,
+logradouro = @logradouro,
+numeroLogradouro = @numeroLogradouro,
+cep = @cep,
+cidade = @cidade,
+estado = @estado,
+genero = @genero,
+datanasc = @datanasc,
+renda = @renda
+where idCliente = @idCliente

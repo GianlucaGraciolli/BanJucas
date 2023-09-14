@@ -41,6 +41,9 @@ namespace PrjtAula01
                 menu.Items[7].Text = String.Empty;
                 menu.Items[8].Visible = false;
                 menu.Items[8].Text = String.Empty;
+                menu.Items[9].Visible = false;
+                menu.Items[9].Text = String.Empty;
+
                 UsuarioLogado.Deslogar();
             }
         }
@@ -140,7 +143,10 @@ namespace PrjtAula01
 
         private void alterarContaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AlterarConta alterarConta = new AlterarConta();
 
+            alterarConta.MdiParent = this;
+            alterarConta.Show();
         }
     }
 }

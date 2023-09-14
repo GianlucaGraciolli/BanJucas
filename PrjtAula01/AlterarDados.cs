@@ -36,7 +36,15 @@ namespace PrjtAula01
 
         private void salvarBotaoAlt_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

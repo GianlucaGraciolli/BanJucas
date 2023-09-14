@@ -54,12 +54,12 @@ namespace PrjtAula01
 
                     //inserindo parâmetros à procedure
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("idCorrentista", conta.IdCliente);
-                    cmd.Parameters.AddWithValue("dataAbertura", conta.AberturaConta);
+                    cmd.Parameters.AddWithValue("idcliente", conta.IdCliente);
+                    cmd.Parameters.AddWithValue("aberturaconta", conta.AberturaConta);
                     cmd.Parameters.AddWithValue("saldo", conta.Saldo);
                     cmd.Parameters.AddWithValue("statusConta", conta.StatusConta);
-                    cmd.Parameters.AddWithValue("statusConta", conta.TipoConta);
-                    cmd.Parameters.AddWithValue("statusConta", conta.Limite);
+                    cmd.Parameters.AddWithValue("tipoconta", conta.TipoConta);
+                    cmd.Parameters.AddWithValue("limite", conta.Limite);
                     cmd.Parameters.AddWithValue("senhaconta", conta.SenhaConta);
 
                     //abrir a conexão

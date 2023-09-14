@@ -38,13 +38,14 @@ namespace PrjtAula01
         {
             try
             {
+                
                 SqlConnection conexao =
                 new SqlConnection(ConfigurationManager.ConnectionStrings["PrjtAula01.Properties.Settings.strConexao"].ToString());
                 SqlDataReader leitor;
 
                 SqlCommand cmd = new SqlCommand();
 
-                cmd.CommandText = "pu_ValidarSenhaConta";
+                cmd.CommandText = "ps_ValidarSenhaConta";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conexao;
 
@@ -60,7 +61,13 @@ namespace PrjtAula01
                 {
                     UsuarioLogado.ContaLogada = Convert.ToInt32(cbContas.Text);
                     MessageBox.Show($"Você está agora na conta {UsuarioLogado.ContaLogada}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Form telaLogin = Application.OpenForms["TelaLogin"];
+                    MenuStrip menuStrip = (MenuStrip)telaLogin.Controls[0];
+                    menuStrip.Items[9].Text = $"Conta: {UsuarioLogado.ContaLogada}";
                     
+                    telaLogin.Show();
+                    this.Close();
                 }
                 else
                 {
