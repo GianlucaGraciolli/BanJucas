@@ -164,6 +164,7 @@
             btConfirmarDeposito.TabIndex = 6;
             btConfirmarDeposito.Text = "Confirmar depósito";
             btConfirmarDeposito.UseVisualStyleBackColor = false;
+            btConfirmarDeposito.Click += btConfirmarDeposito_Click;
             // 
             // lblVoltarDeposito
             // 

@@ -148,5 +148,15 @@ namespace PrjtAula01
             alterarConta.MdiParent = this;
             alterarConta.Show();
         }
+
+        private void contaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

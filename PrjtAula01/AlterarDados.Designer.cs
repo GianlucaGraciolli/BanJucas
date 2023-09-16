@@ -46,13 +46,15 @@
             lblinserirCadastro = new Label();
             limparBotaoAlt = new Button();
             salvarBotaoAlt = new Button();
+            txtSenhaLoginAlt = new TextBox();
+            txtConfSenhaLoginAlt = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(176, 363);
+            pictureBox1.Location = new Point(504, 357);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(131, 124);
             pictureBox1.TabIndex = 17;
@@ -201,7 +203,7 @@
             // limparBotaoAlt
             // 
             limparBotaoAlt.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            limparBotaoAlt.Location = new Point(489, 398);
+            limparBotaoAlt.Location = new Point(851, 357);
             limparBotaoAlt.Name = "limparBotaoAlt";
             limparBotaoAlt.Size = new Size(175, 53);
             limparBotaoAlt.TabIndex = 32;
@@ -211,7 +213,7 @@
             // salvarBotaoAlt
             // 
             salvarBotaoAlt.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            salvarBotaoAlt.Location = new Point(801, 398);
+            salvarBotaoAlt.Location = new Point(851, 428);
             salvarBotaoAlt.Name = "salvarBotaoAlt";
             salvarBotaoAlt.Size = new Size(175, 53);
             salvarBotaoAlt.TabIndex = 33;
@@ -219,12 +221,34 @@
             salvarBotaoAlt.UseVisualStyleBackColor = true;
             salvarBotaoAlt.Click += salvarBotaoAlt_Click;
             // 
+            // txtSenhaLoginAlt
+            // 
+            txtSenhaLoginAlt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenhaLoginAlt.Location = new Point(95, 381);
+            txtSenhaLoginAlt.Name = "txtSenhaLoginAlt";
+            txtSenhaLoginAlt.PlaceholderText = "Digite sua senha";
+            txtSenhaLoginAlt.Size = new Size(300, 29);
+            txtSenhaLoginAlt.TabIndex = 34;
+            txtSenhaLoginAlt.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txtConfSenhaLoginAlt
+            // 
+            txtConfSenhaLoginAlt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConfSenhaLoginAlt.Location = new Point(95, 428);
+            txtConfSenhaLoginAlt.Name = "txtConfSenhaLoginAlt";
+            txtConfSenhaLoginAlt.PlaceholderText = "Confirme sua senha";
+            txtConfSenhaLoginAlt.Size = new Size(300, 29);
+            txtConfSenhaLoginAlt.TabIndex = 35;
+            txtConfSenhaLoginAlt.TextAlign = HorizontalAlignment.Center;
+            // 
             // AlterarDados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 143, 235);
             ClientSize = new Size(1106, 553);
+            Controls.Add(txtConfSenhaLoginAlt);
+            Controls.Add(txtSenhaLoginAlt);
             Controls.Add(salvarBotaoAlt);
             Controls.Add(limparBotaoAlt);
             Controls.Add(lblinserirCadastro);
@@ -269,5 +293,7 @@
         private Label lblinserirCadastro;
         private Button limparBotaoAlt;
         private Button salvarBotaoAlt;
+        private TextBox txtSenhaLoginAlt;
+        private TextBox txtConfSenhaLoginAlt;
     }
 }

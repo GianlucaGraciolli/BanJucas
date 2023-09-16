@@ -42,10 +42,10 @@
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             alterarDadosToolStripMenuItem = new ToolStripMenuItem();
             alterarSenhaToolStripMenuItem = new ToolStripMenuItem();
-            nomeToolStripMenuItem = new ToolStripMenuItem();
-            contaToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             alterarContaToolStripMenuItem = new ToolStripMenuItem();
+            nomeToolStripMenuItem = new ToolStripMenuItem();
+            contaToolStripMenuItem = new ToolStripMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -153,20 +153,6 @@
             alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             alterarSenhaToolStripMenuItem.Click += alterarSenhaToolStripMenuItem_Click;
             // 
-            // nomeToolStripMenuItem
-            // 
-            nomeToolStripMenuItem.Name = "nomeToolStripMenuItem";
-            nomeToolStripMenuItem.Size = new Size(52, 23);
-            nomeToolStripMenuItem.Text = "Nome";
-            nomeToolStripMenuItem.Visible = false;
-            // 
-            // contaToolStripMenuItem
-            // 
-            contaToolStripMenuItem.Name = "contaToolStripMenuItem";
-            contaToolStripMenuItem.Size = new Size(51, 23);
-            contaToolStripMenuItem.Text = "Conta";
-            contaToolStripMenuItem.Visible = false;
-            // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
@@ -175,9 +161,25 @@
             // alterarContaToolStripMenuItem
             // 
             alterarContaToolStripMenuItem.Name = "alterarContaToolStripMenuItem";
-            alterarContaToolStripMenuItem.Size = new Size(180, 22);
+            alterarContaToolStripMenuItem.Size = new Size(145, 22);
             alterarContaToolStripMenuItem.Text = "Alterar Conta";
             alterarContaToolStripMenuItem.Click += alterarContaToolStripMenuItem_Click;
+            // 
+            // nomeToolStripMenuItem
+            // 
+            nomeToolStripMenuItem.Name = "nomeToolStripMenuItem";
+            nomeToolStripMenuItem.Size = new Size(52, 23);
+            nomeToolStripMenuItem.Text = "Nome";
+            nomeToolStripMenuItem.Visible = false;
+            nomeToolStripMenuItem.Click += nomeToolStripMenuItem_Click;
+            // 
+            // contaToolStripMenuItem
+            // 
+            contaToolStripMenuItem.Name = "contaToolStripMenuItem";
+            contaToolStripMenuItem.Size = new Size(51, 23);
+            contaToolStripMenuItem.Text = "Conta";
+            contaToolStripMenuItem.Visible = false;
+            contaToolStripMenuItem.Click += contaToolStripMenuItem_Click;
             // 
             // TelaLogin
             // 
