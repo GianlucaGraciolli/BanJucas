@@ -37,9 +37,9 @@ namespace PrjtAula01
             {
                 Conta conta = new Conta();
 
-                if (Convert.ToInt32(txtValorDeposito.Text) <= 0 || decimal.TryParse(txtValorDeposito.Text,out decimal result) == false)
+                if (Convert.ToInt32(txtValorDeposito.Text) <= 0 || decimal.TryParse(txtValorDeposito.Text, out decimal result) == false)
                 {
-                    throw new Exception("Insira um caracter válido. \n *NÚMERO E/OU ACIMA DE ZERO"); 
+                    throw new Exception("Insira um caracter válido. \n *NÚMERO E/OU ACIMA DE ZERO");
                 }
                 else if (txtValorDeposito.Text == string.Empty)
                 {
@@ -55,7 +55,7 @@ namespace PrjtAula01
                         }
                     }
 
-                    
+
                     conta.Saldo = conta.Saldo + Convert.ToDecimal(txtValorDeposito.Text);
 
                     //Criando uma conexão
@@ -70,20 +70,34 @@ namespace PrjtAula01
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Connection = conexao;
 
-                    
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("idconta", UsuarioLogado.ContaLogada);
+                    cmd.Parameters.AddWithValue("idcliente", UsuarioLogado.IdCliente);
+                    cmd.Parameters.AddWithValue("saldo", conta.Saldo);
+                    cmd.Parameters.AddWithValue("limite", conta.Limite);
+                    cmd.Parameters.AddWithValue("tipoconta", conta.TipoConta);
+                    cmd.Parameters.AddWithValue("statusconta", conta.StatusConta);
+                    if (conta.EncerramentoConta == null)
+                    {
+                        cmd.Parameters.AddWithValue("encerramentoconta", DBNull.Value);
+                    }
+                    cmd.Parameters.AddWithValue("senhaconta", conta.SenhaConta);
 
+                    conexao.Open();
+                    cmd.ExecuteNonQuery();
+                    conexao.Close();
+
+                    UIClear.CleanTxtBoxes(this);
+                    lblSaldoVal.Text = conta.Saldo.ToString();
                 }
-
-
-
 
             }
             catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message, "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
 
         }
     }

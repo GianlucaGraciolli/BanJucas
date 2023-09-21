@@ -88,6 +88,7 @@
             txtIdentificacao.Size = new Size(300, 29);
             txtIdentificacao.TabIndex = 4;
             txtIdentificacao.TextAlign = HorizontalAlignment.Center;
+            txtIdentificacao.Visible = false;
             // 
             // txtNomeDestino
             // 
@@ -99,6 +100,7 @@
             txtNomeDestino.Size = new Size(300, 29);
             txtNomeDestino.TabIndex = 3;
             txtNomeDestino.TextAlign = HorizontalAlignment.Center;
+            txtNomeDestino.Visible = false;
             // 
             // txtNumConta
             // 
@@ -110,6 +112,7 @@
             txtNumConta.Size = new Size(300, 29);
             txtNumConta.TabIndex = 2;
             txtNumConta.TextAlign = HorizontalAlignment.Center;
+            txtNumConta.Visible = false;
             // 
             // txtAgencia
             // 
@@ -121,6 +124,7 @@
             txtAgencia.Size = new Size(300, 29);
             txtAgencia.TabIndex = 1;
             txtAgencia.TextAlign = HorizontalAlignment.Center;
+            txtAgencia.Visible = false;
             // 
             // pictureBox1
             // 

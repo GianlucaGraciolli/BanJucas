@@ -1,5 +1,15 @@
 use BanjucasDkt
 
+select * from Cliente
+select * from Conta
+
+
+
+
+
+
+
+
 insert into Cliente
 values ('Rogerin querô','23496834052',null,'13981777435','rogerinzika@hotmail.com','rua jornalista donato ribeiro','343','11530190','Cubatão','SP','Masculino','06/12/2002',10000,'061202')
 
@@ -44,8 +54,7 @@ values (@nome,@cpf,@rg,@celular,@email,@logradouro,@numerologradouro,@cep,@cidad
 
 exec pi_Cliente ('baixo é ele','12345678900',null,'13921392193','baixo.baixola@senac.edu','rua do pequeno','30312','11290845','baixos','pequenote',''
 
-select * from Cliente
-select * from Conta
+
 
 /*criar conta*/
 create procedure pi_Conta
@@ -86,7 +95,7 @@ drop procedure ps_AlterarContas
 
 create procedure pu_alterarDados
 @idCliente int,
-@nome varchar(120),
+@nome varchar(120),			
 @cpf char(11),
 @rg char(9),
 @celular varchar(20),
@@ -117,3 +126,27 @@ genero = @genero,
 datanasc = @datanasc,
 renda = @renda
 where idCliente = @idCliente
+
+create procedure pu_conta
+@idconta int,
+@idcliente int,
+@saldo numeric(10,2),
+@limite numeric(10,2),
+@tipoconta varchar(30),
+@statusconta varchar(20),
+@encerramentoconta datetime,
+@senhaconta char (6)
+as
+update Conta
+set
+idcliente = @idcliente,
+saldo = @saldo,
+limite = @limite,
+tipoconta = @tipoconta,
+statusconta = @statusconta,
+encerramentoconta = @encerramentoconta,
+senhaConta = @senhaConta
+where idconta = @idconta
+
+drop procedure pu_conta
+

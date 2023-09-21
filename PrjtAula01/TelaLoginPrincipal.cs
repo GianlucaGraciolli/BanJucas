@@ -16,8 +16,8 @@ namespace PrjtAula01
 
         private void BotaoEntrar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //Criando uma conexão
                 SqlConnection conexao =
             new SqlConnection(ConfigurationManager.ConnectionStrings["PrjtAula01.Properties.Settings.strConexao"].ToString());
@@ -105,6 +105,9 @@ namespace PrjtAula01
                         UsuarioLogado.Contas.Add(conta);
                     }
                 }
+
+                    
+
                 leitor.Close(); //fecha leitor
                 conexao.Close(); //fecha conexao com BD
 
@@ -113,11 +116,8 @@ namespace PrjtAula01
                 MenuStrip menuPrincipal = (MenuStrip)telaLogin.Controls[0];
                 menuPrincipal.Items[0].Text = "Logout";
                 menuPrincipal.Items[1].Visible = false;
-                menuPrincipal.Items[2].Visible = true;
-                menuPrincipal.Items[3].Visible = true;
-                menuPrincipal.Items[4].Visible = true;
-                menuPrincipal.Items[5].Visible = true;
-                menuPrincipal.Items[6].Visible = true;
+                menuPrincipal.Items[2].Visible = true;     
+
                 menuPrincipal.Items[7].Visible = true;
                 menuPrincipal.Items[8].Visible = true;
                 menuPrincipal.Items[8].Text = UsuarioLogado.Nome;
@@ -125,10 +125,19 @@ namespace PrjtAula01
                 if (UsuarioLogado.Contas.Count == 0)
                 {
                     menuPrincipal.Items[9].Text = "não há contas";
-                    MessageBox.Show($"Olá,{UsuarioLogado.Nome}");
+                    MessageBox.Show($"Olá, {UsuarioLogado.Nome}");
+                    menuPrincipal.Items[3].Visible = false;
+                    menuPrincipal.Items[4].Visible = false;
+                    menuPrincipal.Items[5].Visible = false;
+                    menuPrincipal.Items[6].Visible = false;
                 }
                 else
                 {
+                    menuPrincipal.Items[3].Visible = true;
+                    menuPrincipal.Items[4].Visible = true;
+                    menuPrincipal.Items[5].Visible = true;
+                    menuPrincipal.Items[6].Visible = true;
+                    UsuarioLogado.ContaLogada = UsuarioLogado.Contas[0].IdConta;
                     menuPrincipal.Items[9].Text = $"Conta: {UsuarioLogado.Contas[0].IdCliente.ToString()}";
 
                     MessageBox.Show($"Olá,{UsuarioLogado.Nome}!\n" +
@@ -165,12 +174,12 @@ namespace PrjtAula01
             {
                 MessageBox.Show("Usuário ou senha incorretos.");
             }
-            }
-            catch (Exception ex)
-            {
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
 
 
 

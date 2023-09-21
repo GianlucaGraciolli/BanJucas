@@ -66,6 +66,7 @@
             // 
             txtCpfCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtCpfCad.Location = new Point(439, 164);
+            txtCpfCad.MaxLength = 11;
             txtCpfCad.Name = "txtCpfCad";
             txtCpfCad.PlaceholderText = "000.000.000-00";
             txtCpfCad.Size = new Size(300, 29);
@@ -76,6 +77,7 @@
             // 
             txtRgCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtRgCad.Location = new Point(754, 164);
+            txtRgCad.MaxLength = 9;
             txtRgCad.Name = "txtRgCad";
             txtRgCad.PlaceholderText = "00.000.000-0";
             txtRgCad.Size = new Size(300, 29);
@@ -86,6 +88,7 @@
             // 
             txtCelCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtCelCad.Location = new Point(123, 209);
+            txtCelCad.MaxLength = 3213;
             txtCelCad.Name = "txtCelCad";
             txtCelCad.PlaceholderText = "Celular";
             txtCelCad.Size = new Size(300, 29);
@@ -117,6 +120,7 @@
             // 
             txtCEPCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtCEPCad.Location = new Point(439, 259);
+            txtCEPCad.MaxLength = 8;
             txtCEPCad.Name = "txtCEPCad";
             txtCEPCad.PlaceholderText = "CEP";
             txtCEPCad.Size = new Size(300, 29);
@@ -202,6 +206,7 @@
             // 
             txtNumLogCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtNumLogCad.Location = new Point(123, 305);
+            txtNumLogCad.MaxLength = 5;
             txtNumLogCad.Name = "txtNumLogCad";
             txtNumLogCad.PlaceholderText = "Numero Logradouro";
             txtNumLogCad.Size = new Size(300, 29);

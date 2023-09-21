@@ -36,7 +36,7 @@ namespace PrjtAula01
 
         private void btAlterarConta_Click(object sender, EventArgs e)
         {
-            try
+                try
             {
                 
                 SqlConnection conexao =

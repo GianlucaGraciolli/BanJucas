@@ -84,6 +84,7 @@
             // 
             txtConfSenhaConta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtConfSenhaConta.Location = new Point(246, 367);
+            txtConfSenhaConta.MaxLength = 6;
             txtConfSenhaConta.Name = "txtConfSenhaConta";
             txtConfSenhaConta.PlaceholderText = "Confirme sua senha";
             txtConfSenhaConta.Size = new Size(300, 29);
@@ -94,6 +95,7 @@
             // 
             txtSenhaConta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenhaConta.Location = new Point(246, 316);
+            txtSenhaConta.MaxLength = 6;
             txtSenhaConta.Name = "txtSenhaConta";
             txtSenhaConta.PlaceholderText = "Crie a senha da sua conta";
             txtSenhaConta.Size = new Size(300, 29);

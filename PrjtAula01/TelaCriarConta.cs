@@ -66,15 +66,28 @@ namespace PrjtAula01
                     conexao.Open();
 
                     //executa o comando no BD e captura o retorno devolvido pelo procedimento
-                    conta.IdCliente = Convert.ToInt32(cmd.ExecuteScalar());
+                    conta.IdConta = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    MessageBox.Show(conta.IdCliente.ToString());
+                    //MessageBox.Show(conta.IdCliente.ToString());
 
                     conexao.Close();
                     MessageBox.Show("Conta criada com sucesso!!!", "Info",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UsuarioLogado.Contas.Add(conta);
+
+                    UsuarioLogado.ContaLogada = UsuarioLogado.Contas[0].IdConta;
+
+                    Form telalogin = Application.OpenForms["TelaLogin"];
+                    MenuStrip menuprincipal = (MenuStrip)telalogin.Controls[0];
+                    if (UsuarioLogado.Contas.Count <= 1)
+                    {
+                        menuprincipal.Items[3].Visible = true;
+                        menuprincipal.Items[4].Visible = true;
+                        menuprincipal.Items[5].Visible = true;
+                        menuprincipal.Items[6].Visible = true;
+                    }
+                    menuprincipal.Items[9].Text = $"Conta: {UsuarioLogado.ContaLogada.ToString()}";
 
                     UIClear.CleanTxtBoxes(this);
 

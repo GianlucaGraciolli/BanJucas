@@ -79,6 +79,7 @@
             btConfirmarSaque.TabIndex = 5;
             btConfirmarSaque.Text = "Confirmar saque";
             btConfirmarSaque.UseVisualStyleBackColor = false;
+            btConfirmarSaque.Click += btConfirmarSaque_Click;
             // 
             // lblValorSaque
             // 
@@ -121,6 +122,7 @@
             txtCelularSaque.Size = new Size(300, 29);
             txtCelularSaque.TabIndex = 3;
             txtCelularSaque.TextAlign = HorizontalAlignment.Center;
+            txtCelularSaque.Visible = false;
             // 
             // txtEmailSaque
             // 
@@ -132,6 +134,7 @@
             txtEmailSaque.Size = new Size(300, 29);
             txtEmailSaque.TabIndex = 2;
             txtEmailSaque.TextAlign = HorizontalAlignment.Center;
+            txtEmailSaque.Visible = false;
             // 
             // txtCpfSaque
             // 
@@ -143,6 +146,7 @@
             txtCpfSaque.Size = new Size(300, 29);
             txtCpfSaque.TabIndex = 1;
             txtCpfSaque.TextAlign = HorizontalAlignment.Center;
+            txtCpfSaque.Visible = false;
             // 
             // txtNomeSaque
             // 
@@ -154,6 +158,7 @@
             txtNomeSaque.Size = new Size(300, 29);
             txtNomeSaque.TabIndex = 0;
             txtNomeSaque.TextAlign = HorizontalAlignment.Center;
+            txtNomeSaque.Visible = false;
             // 
             // lblSaldoVal
             // 
@@ -209,6 +214,7 @@
             Controls.Add(lblSaque);
             Name = "TelaSaque";
             Text = "TelaSaque";
+            Load += TelaSaque_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
